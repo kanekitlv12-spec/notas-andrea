@@ -392,7 +392,7 @@
                 
                 <div class="form-group">
                     <label for="image" class="form-label">URL de imagen (opcional)</label>
-                    <input type="url" id="image" placeholder="https://ejemplo.com/imagen.jpg">
+                    <input type="url" id="image" placeholder="https://ejemplo.com/imagen.jpg  ">
                     <p class="form-hint">
                         Puedes usar imágenes de lugares tranquilos, paisajes, flores, o cualquier cosa que te dé paz
                     </p>
@@ -427,33 +427,8 @@
     </div>
 
     <script>
-        // State management - Notas pre-cargadas para que todos las vean
-        let notes = JSON.parse(localStorage.getItem('notes')) || [
-            {
-                id: 1,
-                text: "Andrea, eres increíble y fuerte. ¡Te quiero mucho! 💖",
-                imageUrl: null,
-                date: "lunes, 7 de febrero de 2026, 10:00"
-            },
-            {
-                id: 2,
-                text: "Recuerda que cada día es una nueva oportunidad para sonreír 🌈",
-                imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-                date: "lunes, 7 de febrero de 2026, 10:05"
-            },
-            {
-                id: 3,
-                text: "Eres más fuerte de lo que crees. Siempre estoy aquí para ti 🐱💕",
-                imageUrl: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80",
-                date: "lunes, 7 de febrero de 2026, 10:10"
-            },
-            {
-                id: 4,
-                text: "Cada amanecer trae consigo una nueva esperanza. ¡Ánimo! 🌅",
-                imageUrl: null,
-                date: "lunes, 7 de febrero de 2026, 10:15"
-            }
-        ];
+        // State management
+        let notes = JSON.parse(localStorage.getItem('notes')) || [];
         let isAdding = false;
 
         // DOM Elements
@@ -565,7 +540,7 @@
                                     src="${note.imageUrl}" 
                                     alt="Imagen de aliento" 
                                     class="note-image"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFD1DC/8B5CF6?text=Imagen+de+aliento'"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFD1DC/8B5CF6?text=Imagen+de+aliento  '"
                                 >
                             </div>
                         ` : ''}
